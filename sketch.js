@@ -300,6 +300,7 @@ function draw() {
   // rotate(frameCount * 0.05);
   // image(mdeGIF, 0, 0);
   // pop();
+  drawFPS();
 }
 
 function drawTop(percent) {
@@ -418,4 +419,11 @@ function drawBinned() {
   for (let num of numbers) {
     if (num.binIt) num.show();
   }
+}
+
+function drawFPS() {
+  textSize(24)
+  fill(255)
+  noStroke();
+  text(frameRate().toFixed(2), 50, 25);
 }
